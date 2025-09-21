@@ -45,10 +45,12 @@
 
         function createTable(dataObj) {
             const resultDiv = document.getElementById("result");
+            
             //clear previous content
             while (resultDiv.firstChild) {
                 resultDiv.firstChild.remove();
             }
+
             //create h2 element
             const h2Elem = document.createElement("h2");
             const h2Val = dataObj["type"];
@@ -71,8 +73,10 @@
             const tableElem = document.createElement("table");
             tableElem.className = "table";
             const tBodyElem = document.createElement("tbody");
+
             //create table heading row
             const trElem = document.createElement("tr");
+
             //retrieve the keys from the first object on records array
             const tblHeadings = Object.keys(dataObj["records"][0]);
             for (const headingVal of tblHeadings) {
