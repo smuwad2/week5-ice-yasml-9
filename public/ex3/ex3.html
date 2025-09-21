@@ -112,7 +112,7 @@
                     h2Elem.classList.add("text-center");
                     pElem.classList.add("text-center");
 
-                    divElem.classList.add("div1", "col-lg-3", "col-md-2", "col-sm-1");
+                    divElem.classList.add("div1", "col-lg-3", "col-md-2", "col-sm-1", "card");
 
                     h2Elem.innerText = item.name;
                     pElem.innerText = "Price: " + Number(item.price).toFixed(2);
@@ -140,17 +140,17 @@
                         console.log("Hello and " + item);
                         created = true;
                         const pElem = document.createElement("p");
-                        const h2Elem = document.createElement("h2");
+                        const pElem2 = document.createElement("p");
                         const divElem = document.createElement("div");
-                        h2Elem.classList.add("text-center");
+                        pElem2.classList.add("text-center");
                         pElem.classList.add("text-center");
 
-                        divElem.classList.add("div1", "col-lg-3", "col-md-2", "col-sm-1");
+                        divElem.classList.add("div1", "col-lg-3", "col-md-2", "col-sm-1", "card");
 
-                        h2Elem.innerText = item.name;
+                        pElem2.innerText = item.name;
                         pElem.innerText = "Price: " + Number(item.price).toFixed(2);
 
-                        divElem.appendChild(h2Elem);
+                        divElem.appendChild(pElem2);
                         divElem.appendChild(pElem);
 
                         itemsDiv.appendChild(divElem);
@@ -164,6 +164,7 @@
 
                     itemsDiv.appendChild(pElem)
                 }
+                console.log(itemsDiv);
             }
         }   
 
